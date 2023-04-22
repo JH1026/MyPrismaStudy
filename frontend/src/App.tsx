@@ -8,7 +8,6 @@ function App() {
   return (
     <SWRConfig
       value={{
-        refreshInterval: 3000,
         fetcher: (resource, init) => fetch(`${import.meta.env.VITE_API_PATH}${resource}`, init).then(res => res.json())
       }}
     >
